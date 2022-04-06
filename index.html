@@ -1,0 +1,184 @@
+<!DOCTYPE html><html lang="en"><head>
+  <base href="./">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="RepressWEB - Gerenciamento de Vendas">
+  <meta name="author" content="Robson Salles">
+  <meta name="keyword" content="vendas">
+	<link rel="shortcut icon" href="assets/favicon.ico">
+	<title>RepressWEB</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    // Shared ID
+    gtag('config', 'UA-118965717-3');
+    // Angular ID
+    gtag('config', 'UA-118965717-4');
+  </script>
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#1976d2">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#1976d2">
+<style>@charset "UTF-8";@charset "UTF-8";:root{--blue:#20a8d8;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#f86c6b;--orange:#f8cb00;--yellow:#ffc107;--green:#4dbd74;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#73818f;--gray-dark:#2f353a;--light-blue:#63c2de;--primary:#20a8d8;--secondary:#c8ced3;--success:#4dbd74;--info:#63c2de;--warning:#ffc107;--danger:#f86c6b;--light:#f0f3f5;--dark:#2f353a;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";--font-family-monospace:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}*,*:before,*:after{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}nav{display:block}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";font-size:.875rem;font-weight:400;line-height:1.5;color:#23282c;text-align:left;background-color:#e4e5e6}svg{overflow:hidden;vertical-align:middle}@media print{*,*:before,*:after{text-shadow:none!important;box-shadow:none!important}@page{size:a3}body{min-width:992px!important}}@media all and (-ms-high-contrast: none){html{display:flex;flex-direction:column}}.app,app-root{display:flex;flex-direction:column;min-height:100vh}@media (min-width: 576px){}@media (min-width: 768px){}@media (min-width: 992px){}@media (min-width: 1200px){}body{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}</style><link rel="stylesheet" href="styles.89a8f492f5c5340c.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.89a8f492f5c5340c.css"></noscript></head>
+<body class="app">
+
+  <style>
+    /* https://codepen.io/mrrocks/pen/EiplA */
+    html,
+    body {
+      height: 100%;
+      margin: 0px;
+    }
+
+    .contentChart {
+      height: 100%;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .spinner {
+      -webkit-animation: rotator 1.4s linear infinite;
+      animation: rotator 1.4s linear infinite;
+    }
+
+    @-webkit-keyframes rotator {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+      }
+    }
+
+    @keyframes rotator {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+      }
+    }
+
+    .path {
+      stroke-dasharray: 187;
+      stroke-dashoffset: 0;
+      -webkit-transform-origin: center;
+      transform-origin: center;
+      -webkit-animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+      animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+    }
+
+    @-webkit-keyframes colors {
+      0% {
+        stroke: #4285F4;
+      }
+
+      25% {
+        stroke: #DE3E35;
+      }
+
+      50% {
+        stroke: #F7C223;
+      }
+
+      75% {
+        stroke: #1B9A59;
+      }
+
+      100% {
+        stroke: #4285F4;
+      }
+    }
+
+    @keyframes colors {
+      0% {
+        stroke: #4285F4;
+      }
+
+      25% {
+        stroke: #DE3E35;
+      }
+
+      50% {
+        stroke: #F7C223;
+      }
+
+      75% {
+        stroke: #1B9A59;
+      }
+
+      100% {
+        stroke: #4285F4;
+      }
+    }
+
+    @-webkit-keyframes dash {
+      0% {
+        stroke-dashoffset: 187;
+      }
+
+      50% {
+        stroke-dashoffset: 46.75;
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+      }
+
+      100% {
+        stroke-dashoffset: 187;
+        -webkit-transform: rotate(450deg);
+        transform: rotate(450deg);
+      }
+    }
+
+    @keyframes dash {
+      0% {
+        stroke-dashoffset: 187;
+      }
+
+      50% {
+        stroke-dashoffset: 46.75;
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+      }
+
+      100% {
+        stroke-dashoffset: 187;
+        -webkit-transform: rotate(450deg);
+        transform: rotate(450deg);
+      }
+    }
+  </style>
+
+<app-root>
+
+  <nav style="background-color:#3f51b5; height: 56px; width: 100%">
+  </nav>
+
+  <div class="contentChart">
+    <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+      <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+    </svg>
+  </div>
+
+</app-root>
+
+<noscript>
+  <h3 style="color:#3f51b5; font-family: Helvetica; margin: 2rem;">
+    Aplicativo indisponível sem javascript.
+  </h3>
+</noscript>
+
+<script src="runtime.351344bd01681257.js" type="module"></script><script src="polyfills.b27bc4a3455b192f.js" type="module"></script><script src="main.10ca8b14e60c7892.js" type="module"></script>
+
+</body></html>
